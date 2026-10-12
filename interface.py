@@ -37,18 +37,18 @@ def add_parameter_ui(clf_name):
     params = dict()
     if clf_name == "KNN":
         K = st.sidebar.slider("K", 1, 15)
-        leaf_size = st.sidebar.slider("Leaf Size", 1, 50)  # Added leaf size for KNN[cite: 3]
+        leaf_size = st.sidebar.slider("Leaf Size", 1, 50)  #parameter for KNN
         params["K"] = K
         params["leaf_size"] = leaf_size
     elif clf_name == "SVM":
         C = st.sidebar.slider("C", 0.01, 10.0)
-        degree = st.sidebar.slider("Degree", 1, 5)  # Added degree for SVM[cite: 3]
+        degree = st.sidebar.slider("Degree", 1, 5)  #parameter for SVM
         params["C"] = C
         params["degree"] = degree
     else:
         max_depth = st.sidebar.slider("Max Depth", 2, 15)
         n_estimators = st.sidebar.slider("Number of Estimators", 1, 100)
-        min_samples_split = st.sidebar.slider("Min Samples Split", 2, 10)  # Added min samples split for Random Forest[cite: 3]
+        min_samples_split = st.sidebar.slider("Min Samples Split", 2, 10)  #Parameter for Random forest
         params["max_depth"] = max_depth
         params["n_estimators"] = n_estimators
         params["min_samples_split"] = min_samples_split
